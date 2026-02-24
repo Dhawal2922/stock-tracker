@@ -1,0 +1,32 @@
+# Stock Market App Project Summary
+
+## Overview
+This is a comprehensive stock market tracking application built with the modern Next.js 15 App Router. It allows users to track their favorite stocks, view real-time market data, and read financial news.
+
+## Technology Stack
+- **Framework:** Next.js 15 (App Router), React 19, TypeScript
+- **Styling:** Tailwind CSS v4, Shadcn UI, Radix UI primitives, Lucide React icons
+- **Database:** MongoDB configured with Mongoose ORM
+- **Authentication:** `better-auth` for secure user login and registration flows
+- **Background Jobs:** Inngest SDK for handling asynchronous or scheduled background tasks
+- **Email:** Nodemailer for automated email communications
+
+## Key Features & Integrations
+1. **Real-time Market Data & Charts:** 
+   The application heavily integrates with **TradingView widgets** for interactive visual data. The dashboard ([app/(root)/page.tsx](file:///Users/dhawaljain/Documents/Stock%20market%20app/stock_market/stock-tracker/app/%28root%29/page.tsx)) features:
+   - Market Overview
+   - Stock Heatmap
+   - Financial News Timeline
+   - Market Quotes
+
+2. **Stock Search & Market News (Finnhub API):**
+   Server actions in [lib/actions/finnhub.actions.ts](file:///Users/dhawaljain/Documents/Stock%20market%20app/stock_market/stock-tracker/lib/actions/finnhub.actions.ts) securely leverage the **Finnhub API** to provide:
+   - Specific company news and broad market news
+   - Stock symbol search functionality
+   - Fallback display for top popular stocks (e.g., Apple, Tesla)
+
+3. **Personalized Watchlists:**
+   Fully implemented backend schema ([database/models/watchlist.model.ts](file:///Users/dhawaljain/Documents/Stock%20market%20app/stock_market/stock-tracker/database/models/watchlist.model.ts)) that links stock symbols to user accounts securely, preventing duplicates, and allowing users to maintain a persistent catalog of targeted companies.
+
+4. **Omnibar Search Component:**
+   Features a quick command menu ([searchCommand.tsx](file:///Users/dhawaljain/Documents/Stock%20market%20app/stock_market/stock-tracker/components/searchCommand.tsx) utilizing `cmdk`) for rapid stock lookups across the platform.

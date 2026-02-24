@@ -96,12 +96,12 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
 };
 
 export const HEATMAP_WIDGET_CONFIG = {
-    dataSource: 'SPX500',
+    dataSource: 'NIFTY50',
     blockSize: 'market_cap_basic',
     blockColor: 'change',
     grouping: 'sector',
     isTransparent: true,
-    locale: 'en',
+    locale: 'in',
     symbolUrl: '',
     colorTheme: 'dark',
     exchanges: [],
